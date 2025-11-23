@@ -15,17 +15,12 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-3. **Configure environment**
-```bash
-cp .env.example .env
-```
-
-4. **Initialize database**
+3. **Initialize database**
 ```bash
 mysql -u root -p < database.sql
 ```
 
-5. **Run application**
+4. **Run application**
 ```bash
 python app.py
 ```
