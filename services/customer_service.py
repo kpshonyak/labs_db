@@ -1,4 +1,3 @@
-# services/customer_service.py
 from services.base_service import BaseService
 from dao.customer_dao import CustomerDAO
 

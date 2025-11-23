@@ -1,4 +1,3 @@
-# services/ticket_service.py
 from services.base_service import BaseService
 from dao.ticket_dao import TicketDAO
 

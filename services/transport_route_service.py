@@ -1,4 +1,3 @@
-# services/transport_route_service.py
 from services.base_service import BaseService
 from dao.transport_route_dao import TransportRouteDAO
 

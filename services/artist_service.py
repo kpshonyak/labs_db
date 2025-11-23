@@ -1,4 +1,3 @@
-# services/artist_service.py
 from services.base_service import BaseService
 from dao.artist_dao import ArtistDAO
 

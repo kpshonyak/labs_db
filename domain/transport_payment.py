@@ -12,7 +12,6 @@ class TransportPayment(Base):
     payment_date = Column(DateTime, server_default=func.now())
     method = Column(Enum('card', 'paypal', 'cash'), nullable=False)
 
-    # Зв'язок M:1 до TransportTicket
     transport_ticket = relationship("TransportTicket", back_populates="payments")
 
     def to_dict(self):

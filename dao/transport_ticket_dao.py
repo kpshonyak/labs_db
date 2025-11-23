@@ -1,4 +1,3 @@
-# dao/transport_ticket_dao.py
 from dao.base_dao import BaseDAO
 from domain.transport_ticket import TransportTicket
 

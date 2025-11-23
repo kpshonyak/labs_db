@@ -1,4 +1,3 @@
-# services/order_service.py
 from services.base_service import BaseService
 from dao.order_dao import OrderDAO
 
@@ -14,7 +13,6 @@ class OrderService(BaseService):
         
     # Логіка для виведення транспортних квитків
     def find_transport_tickets(self, order_id: int):
-        # Спочатку отримуємо customer_id, потім шукаємо квитки
         order = self.find_by_id(order_id)
         if not order:
             return []

@@ -1,4 +1,3 @@
-# domain/event.py
 from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.orm import relationship
 from config.db import Base
@@ -17,9 +16,9 @@ class Event(Base):
     seats = relationship("Seat", back_populates="event")
     tickets = relationship("Ticket", back_populates="event")
 
-    # --- ОНОВЛЕНИЙ МЕТОД to_dict З УМОВОЮ ---
+   
     def to_dict(self, include_nested=False):
-        # 1. Створюємо базовий словник (тільки дані події)
+        
         data = {
             "event_id": self.event_id,
             "title": self.title,
@@ -27,9 +26,8 @@ class Event(Base):
             "location": self.location
         }
 
-        # 2. Якщо попросили вкладені дані - додаємо їх
+       
         if include_nested:
-            # Перевіряємо, чи є артисти, щоб не викликати помилку
             if self.artists:
                 data['artists'] = [artist.to_dict() for artist in self.artists]
             else:

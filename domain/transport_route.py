@@ -1,4 +1,3 @@
-# domain/transport_route.py
 from sqlalchemy import Column, Integer, String, Enum, DateTime
 from sqlalchemy.orm import relationship
 from config.db import Base
@@ -7,7 +6,7 @@ class TransportRoute(Base):
     __tablename__ = 'transport_routes'
 
     transport_tickets = relationship("TransportTicket", back_populates="route")
-    
+
     route_id = Column(Integer, primary_key=True, autoincrement=True)
     type = Column(Enum('train', 'flight', 'bus'), nullable=False)
     origin = Column(String(100), nullable=False)

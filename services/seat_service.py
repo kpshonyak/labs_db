@@ -1,4 +1,3 @@
-# services/seat_service.py
 from services.base_service import BaseService
 from dao.seat_dao import SeatDAO
 

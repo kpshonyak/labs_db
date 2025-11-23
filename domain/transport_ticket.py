@@ -11,10 +11,8 @@ class TransportTicket(Base):
     seat_number = Column(String(10))
     price = Column(DECIMAL(10, 2), nullable=False)
 
-    # Зв'язок M:1 до TransportRoute
     route = relationship("TransportRoute", back_populates="transport_tickets")
     payments = relationship("TransportPayment", back_populates="transport_ticket")
-    # Зв'язок M:1 до Customer
     customer = relationship("Customer") 
 
     def to_dict(self):

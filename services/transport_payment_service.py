@@ -1,4 +1,3 @@
-# services/transport_payment_service.py
 from services.base_service import BaseService
 from dao.transport_payment_dao import TransportPaymentDAO
 

@@ -1,4 +1,3 @@
-# services/event_service.py
 from services.base_service import BaseService
 from dao.event_dao import EventDAO
 

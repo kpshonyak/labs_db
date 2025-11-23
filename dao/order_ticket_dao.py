@@ -1,4 +1,3 @@
-# dao/order_ticket_dao.py
 from dao.base_dao import BaseDAO
 from domain.order_ticket import OrderTicket
 
